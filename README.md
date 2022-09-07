@@ -58,12 +58,39 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## ORM install
+--- 
+
+## Here are some notes on this project.
+
+### Install NestJS CLI
+
+This project, please use `NestJS v8.x` for use DB library.
+
+Run following command.
+
+```bash
+$ npm i -g @nestjs/cli@8.2.8
+```
+
+
+###  Install ORM(typeorm)
 
 ```bash
 # install typeorm
 $ npm install --save typeorm@0.2.45 @nestjs/typeorm@8.0.2 pg
 ```
+> Attention : typeorm v0.3 is unrecommended.
+
+### PostgreSQL and pgAdmin setting
+
+For use docker compose, install Docker Desktop, and run following command.
+```bash
+$ docker-compose up -d
+```
+
+After starting Docker, access `http://localhost:81` and type username and password.
+
+---
 
 ## Support
 
