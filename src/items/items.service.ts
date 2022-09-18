@@ -11,6 +11,7 @@ import { User } from '../entities/user.entity';
 
 @Injectable()
 export class ItemsService {
+  // ItemRepositoryをDI(依存性注入)
   constructor(private readonly itemRepository: ItemRepository) {}
   private items: Item[] = [];
 

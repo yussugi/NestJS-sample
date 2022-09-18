@@ -58,7 +58,7 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
---- 
+---
 
 ## Here are some notes on this project.
 
@@ -72,18 +72,30 @@ Run following command.
 $ npm i -g @nestjs/cli@8.2.8
 ```
 
-
-###  Install ORM(typeorm)
+### Install TypeORM with PostgreSQL Driver
 
 ```bash
-# install typeorm
 $ npm install --save typeorm@0.2.45 @nestjs/typeorm@8.0.2 pg
 ```
+
 > Attention : typeorm v0.3 is unrecommended.
+
+### Execute migration(TypeORM)
+
+First, execute migration:generate command(hoge.ts) for create migration file. Next, `npm run start` to compile typescript file to javascript file. Finally, execute migration:run command.
+
+```bash
+# Create migration file.
+$ npx typeorm migration:generate -n 'migration-file-name'
+
+# Execute migration(SQL).
+$ npx typeorm migration:run
+```
 
 ### PostgreSQL and pgAdmin setting
 
 For use docker compose, install Docker Desktop, and run following command.
+
 ```bash
 $ docker-compose up -d
 ```

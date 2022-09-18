@@ -3,6 +3,11 @@ import { EntityRepository, Repository } from 'typeorm';
 import { CreateUserDto } from './dto/create-user.dto';
 import * as bcrypt from 'bcrypt';
 
+/**
+ * TypeOMR利用時にEntityを管理するためのオブジェクトとして定義
+ * @EntityRepository()デコレーターを付与してTypeORMのRepositoryを継承する
+ * デコレーターの引数に扱いたいEntityを渡す
+ */
 @EntityRepository(User)
 export class UserRepository extends Repository<User> {
   async createUser(createUserDto: CreateUserDto): Promise<User> {
