@@ -1,7 +1,7 @@
 import { User } from '../entities/user.entity';
 import { EntityRepository, Repository } from 'typeorm';
 import { CreateUserDto } from './dto/create-user.dto';
-import * as bcrypt from 'bcrypt';
+import * as bcrypt from 'bcryptjs';
 
 /**
  * TypeOMR利用時にEntityを管理するためのオブジェクトとして定義
