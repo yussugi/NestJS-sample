@@ -1,5 +1,6 @@
 module.exports = {
     type: 'postgres',
+    // Docker, 本番利用時にはhostを変更すること
     host: 'localhost',
     port: 5432,
     username: 'postgres',
