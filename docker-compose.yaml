@@ -1,5 +1,16 @@
 version: '3.7'
 services:
+  nestjs-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nestjs-backend
+    ports:
+      - 10088:10088
+    volumes:
+      - ./docker/nestjs-backend/nestdata:/var/lib/nestjs
+    depends_on:
+      - postgres
 
   postgres:
     image: postgres:14.2-alpine
